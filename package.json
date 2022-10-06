@@ -1,0 +1,32 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "dev": "node index.js --watch --serve",
+    "serve": "node index.js --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "express": "^4.17.1",
+    "node-watch": "^0.7.2",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "html-minifier": "^4.0.0"
+  },
+  "license": "ISC"
+}
