@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#000">
+</head>
+<body>
+  <div class="display-cover">
+    <video autoplay></video>
+    <canvas class="d-none"></canvas>
+    <img class="screenshot-image d-none" alt="">
+    <div class="video-options">
+      <select name="" id="" class="custom-select">
+        <option value="">Select camera</option>
+      </select>
+    </div>
+    <div class="controls">
+      <button class="btn btn-info play" title="Play"><i class="fa fa-play"></i></button>
+      <button class="btn btn-danger pause d-none" title="Pause"><i class="fa fa-stop"></i></button>
+      <button hidden class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>
+    </div>
+  </div>
+  <!-- Original credit for design goes to https://codepen.io/chrisbeast/pen/ebYwpX -->
+</body>
+</html>
