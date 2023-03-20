@@ -1,0 +1,29 @@
+<head></head>
+<body></body>
+<script>
+  async function test () {
+    t = document.createElement('table')
+    a = await fetch("https://api.peterportal.org/rest/v0/schedule/soc?department=MATH&term=2023+Spring&ge=ANY&courseNumber=3A&sectionCodes=&instructorName=&units=&endTime=&startTime=&fullCourses=ANY&building=&room=", {
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.6",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "sec-gpc": "1"
+      },
+      "referrer": "https://antalmanac.com/",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "body": null,
+      "method": "GET",
+      "mode": "cors",
+      "credentials": "omit"
+    }).then(x => x.json())
+    t.innerHTML = a.schools[0].departments[0].courses[0].sections.map(s => ([s.sectionType, s.instructors[0], s.status].map(x => `<td>${x}</td>`).join(''))).map(r => `<tr>${r}</tr>`).join('')
+    document.body.appendChild(t)
+    document.head.innerHTML = '<style>td{border: 1px solid gray;padding: 4px 6px;font-family: sans-serif;}table{border-collapse:collapse}</style>'
+  }
+  test()
+</script>
