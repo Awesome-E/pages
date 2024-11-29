@@ -26,7 +26,7 @@ function renderTemplate (renderer, path) {
 
 function buildApp () {
   // Clear the docs directory
-  fs.rmdirSync('docs', { recursive: true })
+  fs.rmSync('docs', { recursive: true })
 
   function recursiveRoutes (folderName) {
     fs.readdirSync(folderName).forEach(function (file) {
